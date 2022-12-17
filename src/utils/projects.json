@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "title": "Web — Landing Page de Nft (React)",
+        "date": "2021-2022",
+        "image": "/images/p1.jpg",
+        "category": "Frontend",
+        "stack": [
+            "React",
+            "Sass",
+            "FramerMotion.js"
+        ],
+        "description": "Proyecto estilo Nft de Landing Page",
+        "demo": "",
+        "source": ""
+    },
+    {
+        "id": 2,
+        "title": "Web — Landing Page de Nft (React)",
+        "date": "2021-2022",
+        "image": "/images/p1.jpg",
+        "category": "Frontend",
+        "stack": [
+            "React",
+            "Sass",
+            "FramerMotion.js"
+        ],
+        "description": "Proyecto estilo Nft de Landing Page",
+        "demo": "",
+        "source": ""
+    }
+]

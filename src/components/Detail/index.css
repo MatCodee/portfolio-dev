@@ -1,0 +1,83 @@
+
+
+.container-tag {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-tag h2 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+.container-tag .span-date {
+    font-size: 2rem;
+    margin-bottom: 100px;
+}
+.container-tag .span-tag {
+    padding: 10px 30px;
+    color: white;
+    background-color: #3398ff;
+    border-radius: 30px;
+    margin-bottom: 100px;
+}
+
+
+.container-img-detail {
+    margin-top: 50px;
+}
+
+.container-img-detail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+}
+
+
+.image-parallax {
+    position: relative;
+    height: 100vh;
+    border-radius: 50px;
+
+}
+
+
+.container-info {
+    margin-top: 150px;
+}
+.container-info p {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.tag-title-span {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.container-info .stack-tag {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+.container-info .stack-tag span {
+    text-decoration: none;
+    font-weight: 600;
+    background-color: transparent;
+    padding: 10px 30px;
+    font-size: .8rem;
+    border-radius: 30px;
+    border: 2px solid #3398ff;
+}
+
+.link-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 100px;
+}
