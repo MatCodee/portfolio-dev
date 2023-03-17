@@ -172,38 +172,7 @@ section.home-portfolio .list .list-item-portfolio>a:before {
 }
 
 
-/* Icons horizontal */
-.scroll-h-icon {
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    position: relative;
-    transform: translate3d(calc(-25%), 0, 0);
-    animation: marquee 20s linear infinite;
-    animation-direction: alternate-reverse;
-    animation-play-state: running;
-}
-.scroll-h-icon .scroll-h-icon-s {
-    gap: 50px;
-    display: flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.scroll-h-icon .scroll-h-icon-s .container-h-icon {
-    width: 200px;
-    height: 200px;
-    min-width: 200px;
 
-}
-.scroll-h-icon .container-h-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
 
 
 
@@ -288,3 +257,31 @@ section.home-portfolio .list .list-item-portfolio>a:before {
 .Bannerp-content {
     overflow: hidden;
 }
+
+
+.scroll-card {
+    display: flex;
+}
+
+.card {
+    background-color: transparent;
+    transform: translateX(0);
+    animation: move-cards 30s linear infinite;
+    min-width: 350px;
+    animation-direction: normal;
+
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+@keyframes move-cards {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(350px * -12));
+    }
+  }

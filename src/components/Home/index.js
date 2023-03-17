@@ -29,68 +29,97 @@ import icon12 from "../../assets/icons/icon12.png";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { BsYoutube, BsTwitter, BsGithub } from "react-icons/bs";
 
-
-
-const BannerScrollIcons = ({ playMarquee }) => {
+const GridScroll = ({ playMarquee }) => {
   return (
     <>
-      <div className="scroll-h-icon-s">
-        <div className="container-h-icon">
+      <div className="scroll-card">
+        <div className="card">
           <img src={icon1} alt="icon"/>
         </div>
-        <div className="container-h-icon">
+        <div className="card">
           <img src={icon2} alt="icon"/>
         </div>
-        <div className="container-h-icon">
+        <div className="card">
           <img src={icon3} alt="icon"/>
         </div>
-        <div className="container-h-icon">
+        <div className="card">
           <img src={icon4} alt="icon"/>
         </div>
-        <div className="container-h-icon">
+        <div className="card">
           <img src={icon5} alt="icon"/>
         </div>
-        <div className="container-h-icon">
+        <div className="card">
           <img src={icon6} alt="icon"/>
         </div>
-        <div className="container-h-icon">
+        <div className="card">
           <img src={icon7} alt="icon"/>
         </div>
-        <div className="container-h-icon">
+        <div className="card">
           <img src={icon8} alt="icon"/>
         </div>
-        <div className="container-h-icon">
+        <div className="card">
           <img src={icon9} alt="icon"/>
         </div>
-        <div className="container-h-icon">
+        <div className="card">
           <img src={icon10} alt="icon"/>
         </div>
-        <div className="container-h-icon">
+        <div className="card">
           <img src={icon11} alt="icon"/>
         </div>
-        <div className="container-h-icon">
+        <div className="card">
           <img src={icon12} alt="icon"/>
         </div>
+
+
+        <div className="card">
+          <img src={icon1} alt="icon"/>
+        </div>
+        <div className="card">
+          <img src={icon2} alt="icon"/>
+        </div>
+        <div className="card">
+          <img src={icon3} alt="icon"/>
+        </div>
+        <div className="card">
+          <img src={icon4} alt="icon"/>
+        </div>
+        <div className="card">
+          <img src={icon5} alt="icon"/>
+        </div>
+        <div className="card">
+          <img src={icon6} alt="icon"/>
+        </div>
+        <div className="card">
+          <img src={icon7} alt="icon"/>
+        </div>
+        <div className="card">
+          <img src={icon8} alt="icon"/>
+        </div>
+        <div className="card">
+          <img src={icon9} alt="icon"/>
+        </div>
+        <div className="card">
+          <img src={icon10} alt="icon"/>
+        </div>
+        <div className="card">
+          <img src={icon11} alt="icon"/>
+        </div>
+        <div className="card">
+          <img src={icon12} alt="icon"/>
+        </div>
+        
       </div>
     </>
   )
 }
 
 
+
+
 const Banner = ({playMarquee}) => {
   return (
     <div className={`Bannerp-content ${playMarquee && "animate"}`}>
-      <div
-        initial={{ y: 310 }}
-        animate={{ y: 0 }}
-        transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
-        className='scroll-h-icon'>
-          <BannerScrollIcons/>
-          <BannerScrollIcons/>
-          <BannerScrollIcons/>
-          <BannerScrollIcons/>
-
-      </div>
+      <GridScroll />
     </div>
   )
 }
