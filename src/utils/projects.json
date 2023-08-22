@@ -1,31 +1,55 @@
 [
     {
         "id": 1,
-        "title": "Web — Landing Page de Nft (React)",
+        "title": "Portal Educacional de Cursos Online",
         "date": "2021-2022",
-        "image": "/images/p1.jpg",
-        "category": "Frontend",
+        "image": "/images/projects/p1.png",
+        "category": "FullStack",
         "stack": [
-            "React",
+            "Nuxt 2",
             "Sass",
-            "FramerMotion.js"
+            "Django",
+            "AWS",
+            "PostgreSql",
+            "vuetify"
         ],
-        "description": "Proyecto estilo Nft de Landing Page",
+        "description": "Portal educacional de cursos esta paltaforma tiene estas funcionalidades, foro de respuestas, sistema de seguimiento de completacion de cursos, panel de control de la plataforma, sistema de trabajos, sistema de pruebas, sistema de encuestas, sistema de notas",
         "demo": "",
         "source": ""
     },
     {
         "id": 2,
-        "title": "Web — Landing Page de Nft (React)",
-        "date": "2021-2022",
-        "image": "/images/p1.jpg",
-        "category": "Frontend",
+        "title": "Academia de Cursos Online estilo Udemy",
+        "date": "2020-2021",
+        "image": "/images/projects/p2.png",
+        "category": "FullStack",
         "stack": [
-            "React",
+            "Nuxt 2",
             "Sass",
-            "FramerMotion.js"
+            "Django",
+            "AWS",
+            "PostgreSql",
+            "vuetify"
         ],
-        "description": "Proyecto estilo Nft de Landing Page",
+        "description": "Academia de cursos, compras cursos, foro de respuestas, sistema de seguimiento de completacion de cursos, panel de control de la plataforma",
+        "demo": "",
+        "source": ""
+    },
+    {
+        "id": 3,
+        "title": "Aplicacion web de Real state",
+        "date": "2022-2023",
+        "image": "/images/projects/p3.png",
+        "category": "FullStack",
+        "stack": [
+            "html",
+            "css",
+            "bootstrap",
+            "Django",
+            "PostgreSql",
+            "AWS"
+        ],
+        "description": "Aplicacion web de Real state, sistema de miembros, filtrado, almacenamiento de imagenes",
         "demo": "",
         "source": ""
     }

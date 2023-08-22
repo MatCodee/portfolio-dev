@@ -14,17 +14,15 @@ const Header = () => {
                 <span>MatCode</span>
             </div>
             <ul className="header__link">
-                <li><Link to='/'>Services</Link></li>
-                <li><Link to='/'>Project</Link></li>
-                <li><Link to='/'>About</Link></li>
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/project'>Project</Link></li>
              </ul>
             <Link className="button-secundary">Contact me</Link>
             <HiMenuAlt3 onClick={() => handlerClick()} className={`menu-button`} />
             <div className={`show-menu-button ${clicked ? 'active' : ''}`}>
                 <ul>
-                    <li><Link to='/'>Services</Link></li>
-                    <li><Link to='/'>Project</Link></li>
-                    <li><Link to='/'>About</Link></li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/project'>Project</Link></li>
                 </ul>
             </div>
         </div>

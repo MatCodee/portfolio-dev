@@ -60,19 +60,20 @@
 }
 .container-info .stack-tag {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 .container-info .stack-tag span {
     text-decoration: none;
     font-weight: 600;
     background-color: transparent;
-    padding: 10px 30px;
+    padding: 10px 10px;
     font-size: .8rem;
-    border-radius: 30px;
-    border: 2px solid #3398ff;
+    border-bottom: 2px solid #3398ff;
+    font-size: 1.3rem;
+    font-weight: 500;
 }
 
 .link-group {

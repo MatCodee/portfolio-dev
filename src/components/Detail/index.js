@@ -14,9 +14,11 @@ const Detail = () => {
     const filter_project = (id_params) => { return projects.filter((e) => Number(e.id) === Number(id_params))}
     
     useEffect(() => {
-        const data = filter_project(id)
-        setProject(...data)
-    },[])
+        if(id) {
+            const data = filter_project(id)
+            setProject(...data)
+        }
+    },[id])
 
     return (
         <div className="container-home">
@@ -30,11 +32,16 @@ const Detail = () => {
                 bgImageAlt="the dog"
                 className="image-parallax"
                 strength={800}
-            >
-                Blur transition from min to max
+            >   
             </Parallax>
 
             <div className="container-info">
+                <div className="stack-tag">
+                    {project.stack && project.stack.map((e,index) => (
+                        <span key={index}>{e}</span>
+                    ))}
+                </div>
+
                 <p>{project.description}</p>
                 <div className="link-group">
                     <a className="button-secundary" href={project.source}>Source</a>
