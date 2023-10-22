@@ -27,14 +27,25 @@ const Detail = () => {
                 <h2 className="title-detail">{project.title}</h2>
                 <span className="span-date"> ( {project.date} ) </span>
             </div>
-            <Parallax
-                bgImage={project.image}
-                bgImageAlt="the dog"
-                className="image-parallax"
-                strength={800}
-            >   
-            </Parallax>
-
+            {project.video === null ? (
+                <Parallax
+                    bgImage={project.image}
+                    bgImageAlt="the dog"
+                    className="image-parallax"
+                    strength={800}
+                ></Parallax>
+                ) : (
+                <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
+                    <iframe
+                    title={project.title}
+                    src={project.video}
+                    style={{ position: "absolute", top: "0", left: "0", width: "100%", height: "100%" }}
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                    ></iframe>
+                </div>
+                )}
             <div className="container-info">
                 <div className="stack-tag">
                     {project.stack && project.stack.map((e,index) => (
@@ -48,6 +59,10 @@ const Detail = () => {
                     <a className="button-secundary" href={project.demo}>Demo</a>
                 </div>                                  
             </div>
+
+            {/* 
+            <script src="https://player.vimeo.com/api/player.js"></script>
+            */}
         </div>
     )
 }

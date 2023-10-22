@@ -15,7 +15,8 @@
         ],
         "description": "Portal educacional de cursos esta paltaforma tiene estas funcionalidades, foro de respuestas, sistema de seguimiento de completacion de cursos, panel de control de la plataforma, sistema de trabajos, sistema de pruebas, sistema de encuestas, sistema de notas",
         "demo": "",
-        "source": ""
+        "source": "",
+        "video": "https://player.vimeo.com/video/872005864?h=79e0ffac31"
     },
     {
         "id": 2,
@@ -33,7 +34,8 @@
         ],
         "description": "Academia de cursos, compras cursos, foro de respuestas, sistema de seguimiento de completacion de cursos, panel de control de la plataforma",
         "demo": "",
-        "source": ""
+        "source": "",
+        "video": null
     },
     {
         "id": 3,
@@ -51,6 +53,22 @@
         ],
         "description": "Aplicacion web de Real state, sistema de miembros, filtrado, almacenamiento de imagenes",
         "demo": "",
-        "source": ""
+        "source": "",
+        "video": "https://player.vimeo.com/video/872006109?h=67948ebd02"
+    },
+    {
+        "id": 4,
+        "title": "OpenSea Frontend cloned",
+        "date": "2022-2023",
+        "image": "/images/projects/p3.png",
+        "category": "Frontend",
+        "stack": [
+            "vue3",
+            "tailwind"
+        ],
+        "description": "Simple proyecto Frontend de OpenSea",
+        "demo": "",
+        "source": "",
+        "video": "https://player.vimeo.com/video/872005801?h=5ee872f471"
     }
 ]
