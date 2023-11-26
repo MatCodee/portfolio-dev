@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+//icons:
+import { AiOutlineInstagram } from "react-icons/ai";
+import { BsYoutube, BsTwitter, BsGithub } from "react-icons/bs";
+
 import "./index.css";
 import ProjectCategory from "../ProjectCategory";
-
 
 // images
 import img1 from "../../assets/design-01.png";
@@ -22,10 +25,7 @@ import icon11 from "../../assets/icons/icon11.png";
 import icon12 from "../../assets/icons/icon12.png";
 
 
-//icons:
-import { AiOutlineInstagram } from "react-icons/ai";
-import { BsYoutube, BsTwitter, BsGithub } from "react-icons/bs";
-
+// Para un buen manejo del SEO implementar nombre de las imagenes
 const GridScroll = ({ playMarquee }) => {
   return (
     <>
@@ -110,9 +110,6 @@ const GridScroll = ({ playMarquee }) => {
   )
 }
 
-
-
-
 const Banner = ({playMarquee}) => {
   return (
     <div className={`Bannerp-content ${playMarquee && "animate"}`}>
@@ -121,10 +118,8 @@ const Banner = ({playMarquee}) => {
   )
 }
 
-
 const Home = () => {
   const [playMarquee, setPlayMarquee] = useState(false);
-
 
   useEffect(() => {
     setTimeout(() => {
@@ -153,8 +148,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="container-icon">
-        
+        <div className="container-icon">        
+          {/* TODO: Estos elementos no tiene href */}
           <a href="#"> <AiOutlineInstagram className="icon" /></a>
           <a href="#"> <BsTwitter className="icon" /></a>
           {/*

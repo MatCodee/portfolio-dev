@@ -80,7 +80,6 @@
 }
 
 
-
 .animation-list:hover {
     transform: scale(1);
 }
@@ -158,6 +157,8 @@ section.home-portfolio .list .list-item-portfolio>a:before {
 
 .category ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -197,6 +198,13 @@ section.home-portfolio .list .list-item-portfolio>a:before {
     }
 }
   
+
+@media screen and (max-width: 1500px) {
+    .list {
+        grid-template-columns: repeat(2,minmax(300px,1fr));
+    }
+}
+
 
 /* media */
 @media screen and (max-width: 1000px) {

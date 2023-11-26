@@ -11,14 +11,14 @@ const Header = () => {
     return (
         <div className="header">
             <div className="header__logo">
-                <span>MatCode</span>
+                <span>Mat Alt</span>
             </div>
             <ul className="header__link">
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/project'>Project</Link></li>
              </ul>
             <Link className="button-secundary">Contact me</Link>
-            <HiMenuAlt3 onClick={() => handlerClick()} className={`menu-button`} />
+            <HiMenuAlt3 onClick={handlerClick} className={`menu-button`} />
             <div className={`show-menu-button ${clicked ? 'active' : ''}`}>
                 <ul>
                     <li><Link to='/'>Home</Link></li>
