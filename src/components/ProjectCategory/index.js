@@ -10,8 +10,8 @@ const ProjectCategory = () => {
     "Frontend",
     "Backend",
     "FullStack",
-    'Inteligencia Arificial',
-    'Mobile',
+    //'Inteligencia Arificial',
+    //'Mobile',
   ];
 
   const filterProjectsByCategory = (category) => {

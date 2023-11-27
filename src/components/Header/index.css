@@ -24,12 +24,6 @@
 .header__link li {
 
 }
-.header__link li a {
-    color: rgb(111, 111, 111);
-    font-weight: 500;
-    font-size: 1.3rem;
-    text-decoration: none;
-}
 
 
 .menu-button {
@@ -39,6 +33,7 @@
     z-index: 120;
     cursor: pointer;
 }
+
 
 
 

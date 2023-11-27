@@ -136,7 +136,9 @@ const Home = () => {
               <h1 id="text"> Hi, i'm Matias</h1>
             </div>
             <p className="content-text-des">Builder of things.</p>
+            {/* 
             <Link style={{ marginTop: '20px' }} className="button-secundary">Get Started</Link>
+            */}
             <div className="fig-c"></div>
           </div>
           <div className="item2">
