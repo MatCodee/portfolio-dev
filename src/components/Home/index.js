@@ -7,6 +7,8 @@ import { BsYoutube, BsTwitter, BsGithub } from "react-icons/bs";
 import "./index.css";
 import ProjectCategory from "../ProjectCategory";
 
+
+
 // images
 import img1 from "../../assets/design-01.png";
 import img2 from "../../assets/design-02.png";
@@ -31,78 +33,78 @@ const GridScroll = ({ playMarquee }) => {
     <>
       <div className="scroll-card">
         <div className="card">
-          <img src={icon1} alt="icon"/>
+          <img src={icon1} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon2} alt="icon"/>
+          <img src={icon2} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon3} alt="icon"/>
+          <img src={icon3} alt="icon" loading="lazy"/>
         </div>
         <div className="card">
-          <img src={icon4} alt="icon"/>
+          <img src={icon4} alt="icon" loading="lazy"/>
         </div>
         <div className="card">
-          <img src={icon5} alt="icon"/>
+          <img src={icon5} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon6} alt="icon"/>
+          <img src={icon6} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon7} alt="icon"/>
+          <img src={icon7} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon8} alt="icon"/>
+          <img src={icon8} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon9} alt="icon"/>
+          <img src={icon9} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon10} alt="icon"/>
+          <img src={icon10} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon11} alt="icon"/>
+          <img src={icon11} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon12} alt="icon"/>
+          <img src={icon12} alt="icon" loading="lazy" />
         </div>
 
 
         <div className="card">
-          <img src={icon1} alt="icon"/>
+          <img src={icon1} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon2} alt="icon"/>
+          <img src={icon2} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon3} alt="icon"/>
+          <img src={icon3} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon4} alt="icon"/>
+          <img src={icon4} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon5} alt="icon"/>
+          <img src={icon5} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon6} alt="icon"/>
+          <img src={icon6} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon7} alt="icon"/>
+          <img src={icon7} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon8} alt="icon"/>
+          <img src={icon8} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon9} alt="icon"/>
+          <img src={icon9} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon10} alt="icon"/>
+          <img src={icon10} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon11} alt="icon"/>
+          <img src={icon11} alt="icon" loading="lazy" />
         </div>
         <div className="card">
-          <img src={icon12} alt="icon"/>
+          <img src={icon12} alt="icon" loading="lazy" />
         </div>
         
       </div>
@@ -173,50 +175,64 @@ const Home = () => {
 export default Home
 
 
-function consoleText(words, id, colors) {
-  if (colors === undefined) colors = ['#fff'];
-  var visible = true;
-  var letterCount = 1;
-  var x = 1;
-  var waiting = false;
-  var target = document.getElementById(id)
-  target.setAttribute('style', 'color:' + colors[0])
-  window.setInterval(function () {
+function consoleText(words, id, colors = ['#fff']) {
+  const target = document.getElementById(id);
+  let visible = true;
+  let letterCount = 0;
+  let increment = 1;
+  let waiting = false;
+  let colorIndex = 0;
+  let wordIndex = 0;
 
-    if (letterCount === 0 && waiting === false) {
-      waiting = true;
-      target.innerHTML = words[0].substring(0, letterCount)
-      window.setTimeout(function () {
-        var usedColor = colors.shift();
-        colors.push(usedColor);
-        var usedWord = words.shift();
-        words.push(usedWord);
-        x = 1;
-        target.setAttribute('style', 'color:' + colors[0])
-        letterCount += x;
-        waiting = false;
-      }, 1000)
-    } else if (letterCount === words[0].length + 1 && waiting === false) {
-      waiting = true;
-      window.setTimeout(function () {
-        x = -1;
-        letterCount += x;
-        waiting = false;
-      }, 1000)
-    } else if (waiting === false) {
-      target.innerHTML = words[0].substring(0, letterCount)
-      letterCount += x;
+  target.style.color = colors[colorIndex];
+
+  const updateText = () => {
+    if (waiting) return;
+
+    const currentWord = words[wordIndex];
+
+    // Escribir palabra letra por letra
+    if (increment === 1 && letterCount <= currentWord.length) {
+      target.innerHTML = currentWord.substring(0, letterCount);
+      letterCount += increment;
     }
-  }, 120)
-  window.setInterval(function () {
-    if (visible === true) {
-      //con.className = 'console-underscore hidden'
-      visible = false;
 
-    } else {
-      //con.className = 'console-underscore'
-
-      visible = true;
+    // Esperar antes de empezar a borrar
+    if (letterCount === currentWord.length + 1 && increment === 1) {
+      waiting = true;
+      setTimeout(() => {
+        increment = -1;
+        letterCount += increment;
+        waiting = false;
+      }, 1000);
     }
-  }, 400)
+
+    // Borrar palabra letra por letra
+    if (increment === -1 && letterCount >= 0) {
+      target.innerHTML = currentWord.substring(0, letterCount);
+      letterCount += increment;
+    }
+
+    // Esperar antes de cambiar a siguiente palabra
+    if (letterCount === -1 && increment === -1) {
+      waiting = true;
+      setTimeout(() => {
+        wordIndex = (wordIndex + 1) % words.length;
+        colorIndex = (colorIndex + 1) % colors.length;
+        target.style.color = colors[colorIndex];
+        increment = 1;
+        letterCount = 0;
+        waiting = false;
+      }, 1000);
+    }
+  };
+
+  setInterval(updateText, 120);
+
+  // Parpadeo del cursor (si lo implementas)
+  setInterval(() => {
+    visible = !visible;
+    // Aquí puedes añadir clases para mostrar un cursor si deseas
+    // target.classList.toggle('hidden', !visible);
+  }, 400);
 }

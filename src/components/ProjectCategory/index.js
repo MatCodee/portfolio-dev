@@ -4,6 +4,8 @@ import Card from "../Card";
 import Button from "../Button";
 import projects from "../../utils/projects.json";
 
+import "./index.css";
+
 const ProjectCategory = () => {
   const [element, setElement] = useState(projects);
   const category_filter = [
@@ -22,18 +24,7 @@ const ProjectCategory = () => {
   return (
     <div className="container-home">
       <section className="section-layout">
-        <p>SELECTED PROJECTS</p>
-        <h3>Algunos de mis proyectos </h3>
-
-        <div className="category">
-          <ul>
-            {category_filter.map((e, index) => (
-              <Button key={index} handleFilter={filterProjectsByCategory}>
-                {e}
-              </Button>
-            ))}
-          </ul>
-        </div>
+        <h3> Proyectos </h3>
 
         <div className="list">
           {element.map((e, index) => {

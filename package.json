@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^7.10.1",
     "loaders.css": "^0.1.2",
+    "motion": "^12.23.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
@@ -15,6 +16,7 @@
     "react-parallax": "^3.5.1",
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
+    "sass": "^1.89.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

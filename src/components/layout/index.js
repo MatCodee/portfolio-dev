@@ -5,10 +5,12 @@ import Home from "../Home";
 import Detail from "../Detail";
 import Project from "../Project";
 
+import CustomCursor from "../../CustomCursor/index";
 
 const Layout = () => {
     return (
         <>
+            <CustomCursor />
             <div className='container-home'>
                 <Header />
             </div>
